@@ -1,0 +1,493 @@
+html
+{
+    font-size: 10px !important;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    overflow: hidden;
+
+    color: #fff;
+    background: #000;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+
+    color: #fff;
+}
+
+h1
+{
+    font-size: 6rem;
+}
+
+h2
+{
+    font-size: 5rem;
+}
+
+h3
+{
+    font-size: 4rem;
+}
+
+h4
+{
+    font-size: 3rem;
+}
+
+h5
+{
+    font-size: 2rem;
+}
+
+h6
+{
+    font-size: 1.8rem;
+}
+
+p
+{
+    font-size: 1.4rem;
+}
+
+a,
+a:hover,
+a:focus
+{
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+         -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #fff;
+}
+
+@media (max-width:700px)
+{
+    html
+    {
+        font-size: 8px !important;
+    }
+}
+
+@media (max-width:500px)
+{
+    html
+    {
+        font-size: 6px !important;
+    }
+}
+
+@media (max-width:350px)
+{
+    html
+    {
+        font-size: 5px !important;
+    }
+}
+
+@media (orientation:landscape) and (max-height:420px)
+{
+    html
+    {
+        font-size: 8px !important;
+    }
+}
+
+.preloader
+{
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #000000;
+}
+
+.preloader.preloader-hidden
+{
+    height: 0;
+    
+    -webkit-transition: .5s ease .3s;
+         -o-transition: .5s ease .3s;
+            transition: .5s ease .3s;
+}
+
+.preloader .spinner
+{
+    position: absolute;
+    top: 50%;
+
+    width: 100%;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: center;
+    opacity: 1;
+}
+
+.preloader.preloader-hidden .spinner
+{
+    opacity: 0;
+    
+    -webkit-transition: .3s ease;
+         -o-transition: .3s ease;
+            transition: .3s ease;
+}
+
+.preloader .spinner > div
+{
+    display: inline-block;
+
+    width: 18px;
+    height: 18px;
+    margin: 0 6px;
+
+    -webkit-animation: spinner-bounce 1.4s infinite ease-in-out both;
+            animation: spinner-bounce 1.4s infinite ease-in-out both;
+
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+.preloader .spinner .bounce-1
+{
+    -webkit-animation-delay: -.32s;
+            animation-delay: -.32s;
+}
+
+.preloader .spinner .bounce-2
+{
+    -webkit-animation-delay: -.16s;
+            animation-delay: -.16s;
+}
+
+@-webkit-keyframes spinner-bounce
+{
+    0%,
+    80%,
+    100%
+    {
+        -webkit-transform: scale(0);
+    }
+    40%
+    {
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@keyframes spinner-bounce
+{
+    0%,
+    80%,
+    100%
+    {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+
+    40%
+    {
+        -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+    }
+}
+
+.hero
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero .animation-container
+{
+    -webkit-transition: .5s ease;
+         -o-transition: .5s ease;
+            transition: .5s ease;
+}
+
+.hero .animation-container.animation-fade
+{
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade.run-animation
+{
+    opacity: 1;
+}
+
+.hero .animation-container.animation-fade-up
+{
+    -webkit-transform: translateY(10vh);
+        -ms-transform: translateY(10vh);
+            transform: translateY(10vh);
+
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade-up.run-animation
+{
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+
+    opacity: 1;
+}
+
+.hero .animation-container.animation-fade-down
+{
+    -webkit-transform: translateY(-10vh);
+        -ms-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade-down.run-animation
+{
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+
+    opacity: 1;
+}
+
+.hero .animation-container.animation-fade-left
+{
+    -webkit-transform: translateX(10vh);
+        -ms-transform: translateX(10vh);
+            transform: translateX(10vh);
+
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade-left.run-animation
+{
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+
+    opacity: 1;
+}
+
+.hero .animation-container.animation-fade-right
+{
+    -webkit-transform: translateX(-10vh);
+        -ms-transform: translateX(-10vh);
+            transform: translateX(-10vh);
+
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade-right.run-animation
+{
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+
+    opacity: 1;
+}
+
+.hero .front-content
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero .front-content .container-mid
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: center;
+}
+
+.hero .front-content .container-mid img.logo
+{
+    display: block;
+
+    margin: 0 auto;
+}
+
+.hero .front-content .container-mid h1
+{
+    font-weight: bold;
+    line-height: 1.1em;
+
+    margin-top: .5em;
+    margin-bottom: .46em;
+
+    letter-spacing: .025em;
+}
+
+.hero .front-content .container-mid p.subline
+{
+    font-size: 3rem;
+    line-height: 1.4em;
+
+    max-width: 18em;
+    margin-right: auto;
+    margin-bottom: 1.3em;
+    margin-left: auto;
+
+    letter-spacing: .025em;
+}
+
+.hero .front-content .container-mid .open-popup
+{
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 2.6em;
+
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    padding: 0 2.6em;
+
+    cursor: pointer;
+    -webkit-transition: all .1s linear;
+         -o-transition: all .1s linear;
+            transition: all .1s linear;
+    letter-spacing: .025em;
+
+    color: #000000;
+    border: 3px solid #fff;
+    border-radius: 4em;
+    background: none;
+}
+
+.hero .front-content .container-mid .open-popup:hover
+{
+    color: #fdf8f8;
+    background: #000000;
+    text-decoration: none;
+}
+
+.hero .front-content .footer
+{
+    position: absolute;
+    bottom: 10px;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.hero .front-content .footer p
+{
+    font-size: 1.3rem;
+
+    letter-spacing: .025em;
+
+    opacity: .85;
+}
+
+.hero .front-content .footer p a
+{
+    font-weight: bold;
+}
+
+@media (orientation:landscape) and (max-height:420px)
+{
+    .hero .front-content .footer
+    {
+        display: none;
+    }
+}
+
+.hero .background-content
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero .background-content.parallax-on
+{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+
+    width: 110%;
+    height: 110%;
+
+    -webkit-transform: translate3d(-50%, -50%, 0px) !important;
+            transform: translate3d(-50%, -50%, 0px) !important;
+}
+
+.hero .background-content .background-overlay
+{
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .7;
+    background: #020026;
+}
+
+.hero .background-content .background-img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
